@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Moje hobby{% endblock %}</title>
+</head>
+<body>
+    <!--Nagłówek strony-->
+    <header>
+        <h1>Moje hobby to Fotografia!</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">STRONA GŁÓWNA</a></li>
+                <li><a href="{% url 'about' %}">FOTOGRAFIA</a></li>
+                <li><a href="{% url 'gallery' %}">GALERIA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Główna zawartość strony-->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Moje hobby to Fotografia! by Oskar Ostrowski</p>
+    </footer>
+</body>
+</html>
